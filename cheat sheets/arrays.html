@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array cheat sheet</title>
+</head>
+<body>
+    <p>Film med index 3:<span id="movieThree"></span></p>
+    <script>
+        const movieArchive =["Frozen", "Scarface","Matrix","Inception","Oppenheimer", "Barbie"]
+        
+        //skrive ut film med index 3 til nettsiden 
+        const movieIndex = 3
+          document.getElementById("movieThree").innerHTML= movieArchive [movieIndex]
+
+        // legge til en ny film (på slutten av arrayen):
+        movieArchive.push("Gladiator") 
+        // legge til en ny film (vi bestemmer hvor!):
+        movieArchive.splice(1,0,"Bambie")
+        //slette en film:
+        movieArchive.splice(4,2)
+
+        //Skjekke om en verdi finnes i arrayen:
+        const movieExists = movieArchive.includes("Frozen") 
+        console.log("frozen finnes? " + movieExists)
+
+
+        // Sortere arrayen alfabetisk fra A-Å
+        movieArchive.sort()
+        // Snu array på hodet, for å få sortering Å-A (viktig at .sort() gjøres først)
+    
+        movieArchive.reverse()
+
+        const numberArray = [99,2,45,32,10,78]
+        // sortere array med tall fra minst til størst 
+        numberArray.sort(function(a, b){return a-b})
+        // sortere array med tall fra størst til minst 
+        numberArray.sort(function(a, b){return b - a})
+
+
+        // Teste at arreyen funker 
+        console.log(movieArchive)
+        console.log(numberArray)
+
+    </script>
+</body>
+</html>

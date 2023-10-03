@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>konkatinering cheat sheet</title>
+</head>
+<body>
+    <script>
+        <p id="mailStandard"></p>
+        const name = "Ammara Shafiq"
+        const mail = "Ammara_shafiq99@hotmail.com"
+        
+        //Standard konkatinering med plusstegn 
+          const mailCodeStandard = "<a href='mail.to:" + mail +"'>Send epost til" + name + "</a>"
+          document.getElementById("mailStandard").innerHTML= mailCodeStandard 
+
+
+
+
+
+
+    
+        //Template literals 
+        const mailCodeTempLit = `<a href = "mailto:${mail}">Send epost til ${name} </a>`
+        
+
+    </script>
+</body>
+</html>

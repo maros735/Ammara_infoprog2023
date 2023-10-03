@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="test"></p>
+    <p id="parametertest"></p>
+    <script>
+        //deklarer en funksjon kalt testFunction()
+        function testFunction() {
+            console.log("testFunction kjører")
+
+            const testing = true
+            if(testing) {
+                document.getElementById("test").innerHTML = "Testing er ok"
+
+            } else{
+                document.getElementById("test").innerHTML = "Testing feilet"
+            }
+
+        }
+        // kjører TestFunction()
+        testFunction()
+
+
+        //deklarere en funksjon med parameter
+        function alarmClock(day, time) {
+            console.log(time)
+            if (day !== "saturday" && time=== "06:30") {
+               document.getElementById("parametertest").innerHTML = "WAKE UP!!"
+
+            }
+
+        }
+        //kjøre funksjonen alarmClock 
+        alarmClock("Thursday", "06:30")
+        //deklarere en alderskalkulatorfunksjon med to parameter:
+        //en persons fødseldsår og året vi skal regne ut alderen i (med en standard verdi)
+        function ageCalculator(birthyear,year = 2023) {
+            const age = year - birthyear 
+            let text 
+        }
+
+
+    </script>
+</body>
+</html>
