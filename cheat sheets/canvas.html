@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas cheat sheet</title>
+    <style>
+        body{
+            width:100w;
+            height: 100vh;
+            background: #cccccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        canvas{
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="drawingarea"></canvas>
+
+    <script>
+        //hente canvas elementet 
+        const canvas = document.getElementById("drawingarea")
+        //Setter høyde og bredde
+        canvas.width = 800
+        canvas.height = 600 
+        //sette context på canvas 
+        const ctx = canvas.getContext("2d")
+        //tegne en strek
+        ctx.beginPath()
+        ctx.moveTo(100, 100)
+        ctx.lineTo(300, 300)
+        ctx.strokeStyle = "green"
+        ctx.lineWidth = 3
+        ctx.stroke()
+        ctx.closePath()
+        // tegn firkanter 
+        ctx.fillRect(500, 400, 300, 200)
+        ctx.strokeStyle = "red"
+        ctx.strokeRect(498, 1.5, 300, 200)
+
+       //tegn sirkel
+        ctx.arc(150, 450, 50, 0, 2 * Math.PI)
+        ctx.fillStyle = "gold"
+        ctx.fill()
+        ctx.closePath()
+        
+        //tegn tekst 
+        ctx.beginPath()
+        ctx.fillStyle = "black"
+        ctx.font = "60px Georgia"
+        ctx.fillText("10", 120, 470)
+        ctx.closePath()
+    </script>
+</body>
+</html>
